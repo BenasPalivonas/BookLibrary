@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VismaHomework", "VismaHomework\VismaHomework.csproj", "{EC0D3B51-154D-4110-B451-5F451B8E2656}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VismaHomework", "VismaHomework\VismaHomework.csproj", "{EC0D3B51-154D-4110-B451-5F451B8E2656}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VismaHomework.tests", "VismaHomework.tests\VismaHomework.tests.csproj", "{4F211CCE-6B00-43BE-9C53-150F0200770F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{EC0D3B51-154D-4110-B451-5F451B8E2656}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EC0D3B51-154D-4110-B451-5F451B8E2656}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EC0D3B51-154D-4110-B451-5F451B8E2656}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F211CCE-6B00-43BE-9C53-150F0200770F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F211CCE-6B00-43BE-9C53-150F0200770F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F211CCE-6B00-43BE-9C53-150F0200770F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F211CCE-6B00-43BE-9C53-150F0200770F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace VismaHomework.Services.Filter
 {
-    interface IFilterMenu
+  public  interface IFilterMenu
     {
         public void PrintAllFilterCommands();
         public void ReadAndExecute();

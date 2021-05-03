@@ -9,7 +9,7 @@ using VismaHomework.Services.JsonHandler;
 
 namespace VismaHomework.Services.FilterCommands.cs
 {
-    class FilterCommands : IFilterCommands
+   public class FilterCommands : IFilterCommands
     {
         private readonly IJsonHandler _jsonHandler;
         public FilterCommands(IJsonHandler jsonHandler) {

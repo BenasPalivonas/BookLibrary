@@ -6,7 +6,7 @@ using VismaHomework.Models;
 
 namespace VismaHomework.Services.JsonHandler
 {
-    interface IJsonHandler
+  public interface IJsonHandler
     {
         public List<Book> ReturnAllBookDataFromJson();
         public void UpdateBookJson(List<Book> bookList);

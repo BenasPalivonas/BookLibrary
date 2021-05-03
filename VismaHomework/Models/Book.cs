@@ -5,7 +5,7 @@ using System.Text;
 
 namespace VismaHomework.Entities
 {
-    class Book
+    public class Book
     {
 
         public string Name { get; set; }

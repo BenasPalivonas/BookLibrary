@@ -9,10 +9,10 @@ using VismaHomework.Models;
 namespace VismaHomework.Services.JsonHandler
 {
 
-    class JsonHandler : IJsonHandler
+    public class JsonHandler : IJsonHandler
     {
-        private readonly string _pathBooks = AppDomain.CurrentDomain.BaseDirectory + @"\\JsonData\\Books.json";
-        private readonly string _pathCustomers = AppDomain.CurrentDomain.BaseDirectory + @"\\JsonData\\Customers.json";
+        private readonly string _pathBooks = AppDomain.CurrentDomain.BaseDirectory+@"..\..\..\..\\JsonData\\Books.json";
+        private readonly string _pathCustomers = AppDomain.CurrentDomain.BaseDirectory + @"..\..\..\..\\JsonData\\Customers.json";
         public List<Book> ReturnAllBookDataFromJson()
         {
             string booksFromFile;
@@ -27,6 +27,9 @@ namespace VismaHomework.Services.JsonHandler
         {
             try
             {
+                if (bookList == null) {
+                    throw new Exception("Error updating");
+                }
                 var booksToWrite = JsonConvert.SerializeObject(bookList, Formatting.Indented);
                 using (var writer = new StreamWriter(_pathBooks))
                 {
@@ -52,6 +55,10 @@ namespace VismaHomework.Services.JsonHandler
         {
             try
             {
+                if (customerList == null)
+                {
+                    throw new Exception("Error updating");
+                }
                 var customersToWrite = JsonConvert.SerializeObject(customerList, Formatting.Indented);
                 using (var writer = new StreamWriter(_pathCustomers))
                 {

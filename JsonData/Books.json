@@ -1,0 +1,38 @@
+[
+  {
+    "Name": "Nuostabi pasaka",
+    "Author": "pasaku meistras",
+    "Category": "pasaka",
+    "Language": "Lithuanian",
+    "PublicationDate": "2000-10-12T00:00:00",
+    "ISBN": "adsf",
+    "reservedUntill": "2021-06-12T00:00:00"
+  },
+  {
+    "Name": "Stebuklu salis",
+    "Author": "stebuklu meistras",
+    "Category": "stebukliska",
+    "Language": "Lithuanian",
+    "PublicationDate": "2000-10-12T00:00:00",
+    "ISBN": "adsf",
+    "reservedUntill": "2021-05-12T00:00:00"
+  },
+  {
+    "Name": "Kosmosas",
+    "Author": "Kosmoso meistras",
+    "Category": "Kosmosas",
+    "Language": "Lithuanian",
+    "PublicationDate": "2000-10-12T00:00:00",
+    "ISBN": "adsf",
+    "reservedUntill": null
+  },
+  {
+    "Name": "Istorija",
+    "Author": "Istorijos meistras",
+    "Category": "Istoriska",
+    "Language": "Lithuanian",
+    "PublicationDate": "2000-10-12T00:00:00",
+    "ISBN": "adsf",
+    "reservedUntill": "2021-05-07T00:00:00"
+  }
+]

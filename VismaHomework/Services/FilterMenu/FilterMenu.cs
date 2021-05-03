@@ -10,7 +10,7 @@ using VismaHomework.Services.FilterCommands;
 
 namespace VismaHomework.Services.Filter
 {
-    class FilterMenu : IFilterMenu
+ public   class FilterMenu : IFilterMenu
     {
         private readonly IFilterCommands _filterCommands;
         public FilterMenu(IFilterCommands filterCommands) {
@@ -24,7 +24,6 @@ namespace VismaHomework.Services.Filter
             {
                 Console.WriteLine ($"{command}: {command.ToDescriptionStringFilter()}");
             }
-            ReadAndExecute();
         }
         public void ReadAndExecute() {
             try

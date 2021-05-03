@@ -7,7 +7,7 @@ using VismaHomework.Entities;
 
 namespace VismaHomework.Services.ConsoleWriter
 {
-    interface IConsoleWriter
+  public  interface IConsoleWriter
     {
         public void Write(string text);
         public string Read();

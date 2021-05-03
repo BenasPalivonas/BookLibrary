@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace VismaHomework.Services.Commands
 {
-    interface ICommands
+    public interface ICommands
     {
         public void AddBookToJson();
         public void RemoveBookFromJson();

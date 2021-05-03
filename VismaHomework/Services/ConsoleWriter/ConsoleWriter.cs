@@ -11,7 +11,7 @@ using VismaHomework.Services.JsonHandler;
 
 namespace VismaHomework.Services.ConsoleWriter
 {
-    class ConsoleWriter : IConsoleWriter
+   public class ConsoleWriter : IConsoleWriter
     {
         private readonly IFilterMenu _filterMenu;
 
@@ -34,6 +34,7 @@ namespace VismaHomework.Services.ConsoleWriter
         public void WriteBooksTable() 
         {
             _filterMenu.PrintAllFilterCommands();
+            _filterMenu.ReadAndExecute();
         }
         public Book GetBookData() {
             var newBook = new Book();

@@ -7,7 +7,7 @@ using VismaHomework.Entities;
 
 namespace VismaHomework.Models
 {
-    class Customer
+   public class Customer
     {
         public string Name { get; set; }
         public List<Book> TakenBooks { get; set; }

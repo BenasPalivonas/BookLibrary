@@ -7,7 +7,7 @@ using VismaHomework.Entities;
 
 namespace VismaHomework.Services.FilterCommands
 {
-    interface IFilterCommands
+   public interface IFilterCommands
     {
         public void PrintFilteredBooks(string filterBy);
         public void PrintAllBooks();

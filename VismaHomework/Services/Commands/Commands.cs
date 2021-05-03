@@ -10,7 +10,7 @@ using VismaHomework.Services.JsonHandler;
 
 namespace VismaHomework.Services.Commands
 {
-    class Commands : ICommands
+   public class Commands : ICommands
     {
         private readonly IJsonHandler _jsonHandler;
         private readonly IConsoleWriter _consoleWriter;
@@ -19,10 +19,20 @@ namespace VismaHomework.Services.Commands
             _consoleWriter = consoleWriter;
         }
         public void AddBookToJson() {
-            var BookList = _jsonHandler.ReturnAllBookDataFromJson();
-            var newBook = _consoleWriter.GetBookData();
-            BookList.Add(newBook);
-            _jsonHandler.UpdateBookJson(BookList);
+            try
+            {
+                var BookList = _jsonHandler.ReturnAllBookDataFromJson();
+                var newBook = _consoleWriter.GetBookData();
+                if (BookList.Any(b => b.Name.ToLower() == newBook.Name.ToLower()))
+                {
+                    throw new Exception("Book already exsists");
+                }
+                BookList.Add(newBook);
+                _jsonHandler.UpdateBookJson(BookList);
+            }
+            catch(Exception ex) {
+                _consoleWriter.Write(ex.Message);
+            }
         }
         public void RemoveBookFromJson() {
             try
@@ -66,6 +76,14 @@ namespace VismaHomework.Services.Commands
                 }
                 _consoleWriter.Write("Enter the name of who is taking the book");
                 var customerName = _consoleWriter.Read();
+                var allCustomers = _jsonHandler.ReturnAllCustomerDataFromJson();
+                bool hasCustomer = allCustomers.Any(c => c.Name.ToLower() == customerName.ToLower());
+                if (hasCustomer) {
+                    var bookCount = allCustomers.FirstOrDefault(c => c.Name.ToLower() == customerName.ToLower()).TakenBooks.Count();
+                    if (bookCount>=3){
+                        throw new Exception("Can't reserve more than 3 books");
+                    }
+                }
                 _consoleWriter.Write("Untill what date would you like to reserve the book?(eg.10/22/2021)");
                 var reserveUntillDate = DateTime.Parse(_consoleWriter.Read());
                 var nextTwoMonths = DateTime.Today.AddMonths(2);
@@ -76,8 +94,8 @@ namespace VismaHomework.Services.Commands
                 else if (reserveUntillDate < DateTime.Today) {
                     throw new Exception("Cannot go back in time");
                 }
-                var allCustomers = _jsonHandler.ReturnAllCustomerDataFromJson();
-             bool hasCustomer = allCustomers.Any(c => c.Name.ToLower() == customerName.ToLower());
+             
+          
                 var customer = new Customer();
                 if (!hasCustomer) {
                     customer.Name = customerName;
