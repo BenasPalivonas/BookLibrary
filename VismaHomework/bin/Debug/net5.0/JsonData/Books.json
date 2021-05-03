@@ -1,0 +1,20 @@
+[
+  {
+    "Name": "Stebuklas",
+    "Author": "Jonas2",
+    "Category": "Linksma",
+    "Language": "Lithuanian",
+    "PublicationDate": "1992-10-22T00:00:00",
+    "ISBN": "asdfsdafsdfasdf",
+    "reservedUntill": null
+  },
+  {
+    "Name": "Pasaka",
+    "Author": "Jonas",
+    "Category": "Kategorija",
+    "Language": "Lithuanian",
+    "PublicationDate": "0200-09-05T00:00:00",
+    "ISBN": "test",
+    "reservedUntill": "2021-06-12T00:00:00"
+  }
+]
